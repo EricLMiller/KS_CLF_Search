@@ -278,11 +278,11 @@ if __name__=='__main__':
 	idToSequence = readSeqs(fastaFileName, idToInterval)
 
 	# If the output file already exists, exit out as to not modify it.
-	if os.path.isfile("outputFileName"):
+	if os.path.isfile(outputFileName):
 		sys.exit("Output file {0} already exists. Exiting.".format(outputFileName))
 
 	# Create header row for the results.
-	output = open("tester_ORF.txt", "w")
+	output = open(outputFileName, "w")
 	output.write("\t".join(["seqID", "blastStart", "blastEnd", "blastCoverage", "geneStart", "geneEnd", "proteinLength", "proteinSeq"]))
 	output.write("\n")
 

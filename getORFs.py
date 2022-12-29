@@ -144,7 +144,7 @@ def readSeqs(fastaFileName, idToInterval):
 ## 		- is bounded by an initial in-frame stop codon (!!!)
 ##		- followed by any potential start codon
 ##		- terminating in a stop codon or the end of a sequence
-## if no inital in-fram stop codon is possible, the first possible start codon xxxxx is this true?
+## if no inital in-fram stop codon is possible, the first possible start codon
 ## for any given frame is used instead. 
 def getORFs(sequence, initialOffset, endingOffset, reverse):
 	startCodons = set(['ATG', 'GTG', 'TTG', 'ATT', 'CTG'])	# All of the potential start/stop codons
